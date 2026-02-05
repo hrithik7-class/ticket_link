@@ -1,0 +1,266 @@
+/* Home.module.css */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: 16px;
+  margin-bottom: 3rem;
+  border: 1px solid #e1e8ed;
+  color: #fff; /* White text */
+  background-image: url("https://i.shgcdn.com/16513b23-65bb-47d2-bff2-cee4c1952e1e/-/format/auto/-/preview/3000x3000/-/quality/lighter/");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  overflow: hidden;
+}
+
+/* Overlay effect */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.733),
+    rgba(0, 0, 0, 0.685)
+  ); /* Black fade overlay */
+  z-index: 1;
+  border-radius: 16px;
+}
+
+/* Ensure content stays above overlay */
+.hero * {
+  position: relative;
+  z-index: 2;
+}
+
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #e74c3c;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.3);
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+  background: #c0392b;
+}
+
+/* Section Styling */
+.servicesSection,
+.statsSection,
+.offerSection {
+  margin-bottom: 4rem;
+  padding: 0 1rem;
+}
+
+.sectionHeading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.sectionHeading::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #e74c3c, #c0392b);
+  border-radius: 2px;
+}
+
+.sectionSubtitle {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.featureCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.featureIcon {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.featureDescription {
+  color: #666;
+  line-height: 1.6;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background: #2c3e50;
+  border-radius: 16px;
+  color: white;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e74c3c;
+  display: block;
+}
+
+.statLabel {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .sectionHeading {
+    font-size: 2rem;
+  }
+  
+  .sectionSubtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .servicesSection,
+  .statsSection,
+  .offerSection {
+    margin-bottom: 3rem;
+    padding: 0 0.5rem;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .featureCard {
+    padding: 1.5rem;
+  }
+  
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 0.5rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .sectionHeading {
+    font-size: 1.75rem;
+  }
+  
+  .sectionSubtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .servicesSection,
+  .statsSection,
+  .offerSection {
+    margin-bottom: 2.5rem;
+    padding: 0 0.25rem;
+  }
+  
+  .ctaButton {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .statNumber {
+    font-size: 2rem;
+  }
+}
+

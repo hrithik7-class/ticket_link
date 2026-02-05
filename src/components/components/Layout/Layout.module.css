@@ -1,0 +1,30 @@
+/* Layout.module.css */
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 0.5rem 0.25rem;
+  }
+}

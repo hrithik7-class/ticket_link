@@ -1,0 +1,621 @@
+/* NewTicketForm.module.css */
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  background: white;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.headerContent {
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  z-index: 2;
+  touch-action: manipulation;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.form {
+  padding: 1rem;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.form::-webkit-scrollbar {
+  width: 6px;
+}
+
+.form::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.form::-webkit-scrollbar-thumb {
+  background: rgba(44, 62, 80, 0.3);
+  border-radius: 3px;
+}
+
+.form::-webkit-scrollbar-thumb:hover {
+  background: rgba(44, 62, 80, 0.5);
+}
+
+/* Hide scrollbar on mobile */
+@media (max-width: 767px) {
+  .form {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .form::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+}
+
+.label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.required {
+  color: #e74c3c;
+  font-weight: 700;
+}
+
+.input, .select, .textarea {
+  padding: 0.875rem 1rem;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.input:focus, .select:focus, .textarea:focus {
+  outline: none;
+  border-color: #2c3e50;
+  box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+  transform: translateY(-1px);
+}
+
+.input.error, .select.error, .textarea.error {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.input.readOnly {
+     border-color: #27ae60;
+    background: #f0fff4;
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.2);
+    color: black;
+
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.errorMessage {
+  color: #e74c3c;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.radioItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.radioItem:hover {
+  border-color: #2c3e50;
+  background: #f8f9fa;
+}
+
+.radioItem.selected {
+  border-color: #2c3e50;
+  background: #f8f9fa;
+}
+
+.radioInput {
+  width: 18px;
+  height: 18px;
+  accent-color: #2c3e50;
+}
+
+.radioLabel {
+  font-weight: 500;
+  color: #2c3e50;
+  cursor: pointer;
+}
+
+.fileInput {
+  padding: 1rem;
+  border: 2px dashed #e1e8ed;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fafbfc;
+}
+
+.fileInput:hover {
+  border-color: #2c3e50;
+  background: #f8f9fa;
+}
+
+.filePreview {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.fileList {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.fileItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e1e8ed;
+}
+
+.fileItem:last-child {
+  border-bottom: none;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-top: 1px solid #e1e8ed;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  min-width: 120px;
+  justify-content: center;
+  touch-action: manipulation;
+  min-height: 44px;
+}
+
+.buttonSecondary {
+  background: #6c757d;
+  color: white;
+}
+
+.buttonSecondary:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+}
+
+.buttonPrimary {
+  background: #e74c3c;
+  color: white;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.buttonPrimary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+  background: #c0392b;
+}
+
+.buttonSuccess {
+  background: #27ae60;
+  color: white;
+  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+.buttonSuccess:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+  background: #229954;
+}
+
+.buttonSuccess:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.buttonPrimary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.loadingSpinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e1e8ed;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sectionIcon {
+  color: #2c3e50;
+}
+
+.paymentMethod {
+  margin-top: 0.5rem;
+}
+
+.paymentOption {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 2px solid #e1e8ed;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.paymentOption:hover {
+  border-color: #2c3e50;
+  background: #f8f9fa;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.paymentOption:has(input:checked) {
+  border-color: #27ae60;
+  background: #f0fff4;
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.2);
+}
+
+.paymentLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  flex: 1;
+}
+
+.paymentIcon {
+  font-size: 1.5rem;
+}
+
+.paymentDesc {
+  font-size: 0.875rem;
+  color: #666;
+  margin-left: auto;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .container {
+    max-width: 900px;
+    margin: 1rem auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    min-height: calc(100vh - 2rem);
+  }
+  
+  .header {
+    padding: 2rem;
+  }
+  
+  .form {
+    padding: 2rem;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .actions {
+    padding: 2rem;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    margin: 0;
+    border-radius: 0;
+    min-height: 100vh;
+  }
+  
+  .header {
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .form {
+    padding: 1rem;
+  }
+  
+  .grid {
+    gap: 0.75rem;
+  }
+  
+  .actions {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .button {
+    flex: 1;
+    min-width: auto;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .radioGroup {
+    gap: 0.5rem;
+  }
+  
+  .radioItem {
+    padding: 0.75rem;
+  }
+  
+  .paymentOption {
+    padding: 0.75rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .form {
+    padding: 0.75rem;
+  }
+  
+  .grid {
+    gap: 0.5rem;
+  }
+  
+  .fieldGroup {
+    margin-bottom: 0.5rem;
+  }
+  
+  .input, .select, .textarea {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+  
+  .button {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .actions {
+    padding: 0.75rem;
+    flex-direction: column;
+  }
+  
+  .button {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+/* RADIO: responsive two-column layout */
+.radioGroup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* two columns */
+  gap: 10px; /* space between cells */
+  align-items: start;
+}
+
+/* mobile: single column */
+@media (max-width: 640px) {
+  .radioGroup {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Each radio item: use a compact pill/card style */
+.radioItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;                 /* space between radio and label */
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6e9ee; /* light border */
+  background: #fff;
+  cursor: pointer;
+  min-height: 44px;          /* touch-friendly */
+  box-sizing: border-box;
+}
+
+/* when selected, show clear state */
+.selected {
+  border-color: #374151;      /* darker border */
+  background: #f1f5f9;        /* subtle highlight */
+}
+
+/* radio input smaller and aligned */
+.radioInput {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+/* label text can wrap but remains readable */
+.radioLabel {
+  display: block;
+  line-height: 1.1;
+  font-size: 0.95rem;
+  color: #111827;
+}
+
+/* small tweak when you need the whole row click target */
+.radioItem:hover {
+  box-shadow: 0 2px 6px rgba(16,24,40,0.04);
+}
+
