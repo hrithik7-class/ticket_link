@@ -47,14 +47,14 @@ export default function App() {
       <Layout>{renderPage()}</Layout>
       
       {/* Fixed vertical icons - bottom left */}
-      <div className="fixed bottom-6 left-6 flex flex-col gap-4 z-50 md:bottom-8 md:left-8 lg:bottom-10 lg:left-10">
+      <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-50 md:bottom-8 md:right-8 lg:bottom-10 lg:right-10">
         <a
           href="tel:+918169021148" // Replace with your phone number
           className="w-12 h-12 md:w-16 md:h-16 lg:w-16 lg:h-16 bg-white/30 backdrop-blur-2xl hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
           aria-label="Call us"
           title="Call"
         >
-          <FaPhone className="w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-green-400 p-2 rounded-full" />
+          <FaPhone className="w-9 h-9 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-green-400 p-2 rounded-full" />
         </a>
         <a
           href="https://wa.me/918169021148" // Replace with your WhatsApp number
@@ -64,7 +64,7 @@ export default function App() {
           aria-label="WhatsApp"
           title="WhatsApp"
         >
-          <FaWhatsapp className="w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-green-400 p-2 rounded-full" />
+          <FaWhatsapp className="w-9 h-9 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-green-400 p-2 rounded-full" />
         </a>
         <a
           href="https://share.google/McmT89jz9nLLv3Ggu" // Replace with Google Maps link or search
@@ -74,7 +74,7 @@ export default function App() {
           aria-label="Google Maps"
           title="Google"
         >
-          <SiGooglenews className="w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-purple-400 p-2 rounded-full" />
+          <img src="/images/gmb.png" className="w-9 h-9 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-purple-400 p-2 rounded-full" />
         </a>
       </div>
     </>

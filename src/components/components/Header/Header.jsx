@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { FaPlus, FaBars, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
-import logo from "../../../assets/logo.jpg";
+import logo from "../../../../public/images/logo.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -109,7 +109,7 @@ const Header = () => {
         ${isScrolled ? "bg-black/95 backdrop-blur-md shadow-2xl" : "bg-black"}`}
       >
         <div className="max-w-[1400px] mx-auto">
-          <div className="flex justify-between items-center h-[72px] px-4">
+          <div className="flex justify-between items-center h-[76px] px-4">
             {/* LOGO */}
             <div className="relative h-full flex items-center bg-white px-8 pr-12 skew-x-[-12deg] -ml-6 border-r-4 border-b-4 border-gray-100/50 shadow-xl">
               <a href="#/" className="flex items-center skew-x-[12deg] pl-4">

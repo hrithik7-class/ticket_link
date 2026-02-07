@@ -11,7 +11,7 @@ const WhyChooseUsSection = () => {
   const stats = [
     {
       icon: FaCheckCircle,
-      number: "25K+",
+      number: "1lac+",
       label: "Installations",
       color: "from-emerald-500 to-green-500",
       description: "Flawless setups across India"
@@ -96,7 +96,7 @@ const WhyChooseUsSection = () => {
               className="inline-block px-8 py-3 bg-white/10 backdrop-blur-xl rounded-2xl text-blue-100 text-lg font-semibold mb-8 border border-white/20 hover:bg-white/20 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
             >
-              <FaBolt className="inline mr-2" /> Why Choose Quick Serv?
+              <FaBolt className="inline mr-2" /> Why Choose Quik Serv?
             </motion.span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-white via-blue-50 to-emerald-50 bg-clip-text text-transparent mb-4 drop-shadow-2xl leading-tight">
               Proven Excellence

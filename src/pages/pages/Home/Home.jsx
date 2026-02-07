@@ -16,44 +16,49 @@ import {
   FaHeadset,
   FaCalendarAlt
 } from 'react-icons/fa';
-import bgImg1 from "../../../assets/hero-2.png"; // Slide 1 - Installation
-import bgImg2 from "../../../assets/hero-1.avif"; // Slide 2 - Safety (add this image)
-import bgImg3 from "../../../assets/hero-2.png"; // Slide 3 - Service (add this image)
+
+import bgImg1 from '../../../../public/images/ban1.jpeg'
+import bgImg2 from '../../../../public/images/ban2.jpeg'
+import bgImg3 from '../../../../public/images/ban3.jpeg'
+import bgImg4 from '../../../../public/images/ban4.jpeg'
+import bgImg5 from '../../../../public/images/ban5.jpeg'
+
 import WhyChooseUsSection from '../../../components/components/WhyChooseUs';
-
- 
- 
-  const contactItems = [
-    {
-      icon: FaPhone,
-      title: "+91 8169021148",
-      subtitle: "24/7 Customer Support",
-      action: "tel:+918169021148",
-      color: "from-emerald-500 to-green-500"
-    },
-    {
-      icon: FaEnvelope,
-      title: "support@quikservtechnologies.com",
-      subtitle: "Quick Response",
-      action: "mailto:support@quikservtechnologies.com",
-      color: "from-blue-500 to-indigo-500"
-    },
-    {
-      icon: FaMapMarkerAlt,
-      title: "Mumbai, Maharashtra",
-      subtitle: "PAN India Service",
-      action: "#",
-      color: "from-purple-500 to-pink-500"
-    }
-  ];
+import BrandScroller from '../../../components/components/DascamBrand';
 
 
-  const stats = [
-    { icon: FaMapMarkerAlt, number: "9000+", label: "Pincodes", color: "from-blue-500 to-blue-600" },
-    { icon: FaTools, number: "50K+", label: "Installations", color: "from-emerald-500 to-emerald-600" },
-    { icon: FaCar, number: "All", label: "Vehicle Types", color: "from-purple-500 to-purple-600" },
-    { icon: FaShieldAlt, number: "100%", label: "Warranty Safe", color: "from-orange-500 to-orange-600" }
-  ];
+
+const contactItems = [
+  {
+    icon: FaPhone,
+    title: "+91 8169021148",
+    subtitle: "24/7 Customer Support",
+    action: "tel:+918169021148",
+    color: "from-emerald-500 to-green-500"
+  },
+  {
+    icon: FaEnvelope,
+    title: "support@quikservtechnologies.com",
+    subtitle: "Quick Response",
+    action: "mailto:support@quikservtechnologies.com",
+    color: "from-blue-500 to-indigo-500"
+  },
+  {
+    icon: FaMapMarkerAlt,
+    title: "Mumbai, Maharashtra",
+    subtitle: "PAN India Service",
+    action: "#",
+    color: "from-purple-500 to-pink-500"
+  }
+];
+
+
+const stats = [
+  { icon: FaMapMarkerAlt, number: "9000+", label: "Pincodes", color: "from-blue-500 to-blue-600" },
+  { icon: FaTools, number: "1lac+", label: "Installations", color: "from-emerald-500 to-emerald-600" },
+  { icon: FaCar, number: "All", label: "Vehicle Types", color: "from-purple-500 to-purple-600" },
+  { icon: FaShieldAlt, number: "100%", label: "Warranty Safe", color: "from-orange-500 to-orange-600" }
+];
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -61,22 +66,29 @@ const Home = () => {
 
   const slides = [
     {
-      title: "Precision Installation.",
-      subtitle: "Complete Peace of Mind.",
-      description: "Factory-finish wiring by trained professionals.",
+      title: "Trained Technicians.",
+      description: "Certified experts for safe and precise installation.",
       bgImage: bgImg1
     },
     {
-      title: "Engineered for Safety & Performance",
-      subtitle: "Professional Installation",
-      description: "Proper power connection. No loose wiring. No dashboard damage.",
+      title: " Photo & Video Proof",
+      description: "Installation proof shared for full transparency.",
       bgImage: bgImg2
     },
     {
-      title: "Service That Moves With You",
-      subtitle: "Upgrade & Maintain",
-      description: "Upgrading your car? We reinstall and maintain your dashcam with care.",
+      title: "Transparent Booking Process",
+      description: "Clear pricing with no hidden charges.",
       bgImage: bgImg3
+    },
+    {
+      title: " Refund Policy Available",
+      description: "Fair and customer-friendly refund support.",
+      bgImage: bgImg4
+    },
+    {
+      title: " 7-Day Service Warranty",
+      description: "7-day post-installation service assurance.",
+      bgImage: bgImg5
     }
   ];
 
@@ -123,10 +135,10 @@ const Home = () => {
     }
   };
 
-    const itemVariants = {
+  const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
     }
@@ -134,18 +146,18 @@ const Home = () => {
 
   const statVariants = {
     hidden: { scale: 0.8, opacity: 0 },
-    visible: { 
-      scale: 1, 
+    visible: {
+      scale: 1,
       opacity: 1,
-      transition: { 
-        type: "spring", 
-        stiffness: 300, 
-        damping: 20 
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 20
       }
     }
   };
 
-    const containerVariants = {
+  const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -156,15 +168,15 @@ const Home = () => {
     }
   };
 
-    const cardVariants = {
+  const cardVariants = {
     hidden: { opacity: 0, y: 40, scale: 0.9 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
+    visible: {
+      opacity: 1,
+      y: 0,
       scale: 1,
-      transition: { 
-        duration: 0.6, 
-        ease: [0.22, 1, 0.36, 1] 
+      transition: {
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1]
       }
     }
   };
@@ -228,6 +240,7 @@ const Home = () => {
 
   return (
     <div className="font-sans">
+      
       {/* Hero Carousel Section with Framer Motion */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden" id='home'>
 
@@ -263,7 +276,7 @@ const Home = () => {
               variants={contentVariants}
             >
               <motion.h1
-                className="text-4xl md:text-6xl lg:text-[64px] font-bold text-white leading-[1.1] tracking-tight drop-shadow-2xl mb-4"
+                className="text-4xl md:text-6xl lg:text-[64px] font-bold text-white leading-[1.1] tracking-tight drop-shadow-2xl mb-2"
                 variants={{
                   hidden: { opacity: 0, y: 30 },
                   visible: { opacity: 1, y: 0 }
@@ -277,18 +290,11 @@ const Home = () => {
                 >
                   {slides[currentSlide].title}
                 </motion.span>
-                <motion.span
-                  className="block text-[#548bf4]"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.4 }}
-                >
-                  {slides[currentSlide].subtitle}
-                </motion.span>
+
               </motion.h1>
 
               <motion.p
-                className="text-lg md:text-[22px] text-gray-100 font-normal mb-10 tracking-wide drop-shadow-lg"
+                className="text-lg md:text-2xl text-gray-100 font-normal mb-10 tracking-wide drop-shadow-lg"
                 variants={{
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 }
@@ -378,101 +384,8 @@ const Home = () => {
         </motion.div>
       </section>
 
-
       {/* Dashcam Brands Section */}
-      <section className="py-24 bg-white overflow-hidden" id="services">
-        <div className="container-custom">
-          <h2 className="text-[36px] font-bold text-center text-black mb-2">Dashcam Brands We Install</h2>
-          <p className="text-center text-black/90 text-lg mb-16 font-normal">Trusted by leading dashcam manufacturers across PAN India</p>
-
-          {/* Infinite Horizontal Scrolling Brands */}
-          <div className="relative">
-            {/* Duplicate array for seamless infinite scroll */}
-            <motion.div
-              className="flex"
-              animate={{
-                x: ["0%", "-50%"],
-              }}
-              transition={{
-                duration: 20, // Full cycle duration (adjust speed)
-                repeat: Infinity,
-                ease: "linear"
-              }}
-              style={{ width: "200%" }} // Double width for seamless loop
-            >
-              {/* First set of brands */}
-              <div className="flex w-full shrink-0">
-                {[
-                  "https://installdashcam.in/assets/customer1-DOUBqQLr.jpg",
-                  "https://installdashcam.in/assets/customer2-CfrxmUx2.jpg",
-                  "https://installdashcam.in/assets/customer3-CUgGN7VD.jpg",
-                  "https://installdashcam.in/assets/customer4-BTKninds.jpg",
-                  "https://installdashcam.in/assets/customer5-BQnKL1Hl.jpg",
-                  "https://installdashcam.in/assets/omai-B6-_CY3U.jpg",
-                  "https://installdashcam.in/assets/customer7-Dm-k3KzQ.jpg",
-                  "https://installdashcam.in/assets/customer8-BHD2pgXp.jpg",
-                  "https://installdashcam.in/assets/customer9-iZt8T4ED.jpg"
-                ].map((imgUrl, index) => (
-                  <motion.div
-                    key={`brand1-${index}`}
-                    className="w-48 md:w-52 lg:w-60 h-48 md:h-52 lg:h-60 mx-4 bg-white rounded-[24px] flex items-center justify-center p-6 shadow-lg hover:shadow-2xl group overflow-hidden cursor-pointer flex-shrink-0"
-                    whileHover={{
-                      scale: 1.05,
-                      rotateY: 5,
-                      transition: { duration: 0.3 }
-                    }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <motion.img
-                      src={imgUrl}
-                      alt={`Brand ${index + 1}`}
-                      className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
-                      initial={{ scale: 0.9, opacity: 0.8 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      transition={{ duration: 0.5 }}
-                    />
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Duplicate set for seamless loop */}
-              <div className="flex w-full shrink-0">
-                {[
-                  "https://installdashcam.in/assets/customer1-DOUBqQLr.jpg",
-                  "https://installdashcam.in/assets/customer2-CfrxmUx2.jpg",
-                  "https://installdashcam.in/assets/customer3-CUgGN7VD.jpg",
-                  "https://installdashcam.in/assets/customer4-BTKninds.jpg",
-                  "https://installdashcam.in/assets/customer5-BQnKL1Hl.jpg",
-                  "https://installdashcam.in/assets/omai-B6-_CY3U.jpg",
-                  "https://installdashcam.in/assets/customer7-Dm-k3KzQ.jpg",
-                  "https://installdashcam.in/assets/customer8-BHD2pgXp.jpg",
-                  "https://installdashcam.in/assets/customer9-iZt8T4ED.jpg"
-                ].map((imgUrl, index) => (
-                  <motion.div
-                    key={`brand2-${index}`}
-                    className="w-48 md:w-52 lg:w-60 h-48 md:h-52 lg:h-60 mx-4 bg-white rounded-[24px] flex items-center justify-center p-6 shadow-lg hover:shadow-2xl group overflow-hidden cursor-pointer flex-shrink-0"
-                    whileHover={{
-                      scale: 1.05,
-                      rotateY: 5,
-                      transition: { duration: 0.3 }
-                    }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <motion.img
-                      src={imgUrl}
-                      alt={`Brand ${index + 1}`}
-                      className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
-                      initial={{ scale: 0.9, opacity: 0.8 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      transition={{ duration: 0.5 }}
-                    />
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <BrandScroller/>
 
       {/* about us */}
       <section className="pt-24 bg-gradient-to-br from-slate-800 via-blue-900 to-gray-800 relative overflow-hidden" id="about">
@@ -497,7 +410,7 @@ const Home = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.5, type: "spring" }}
             >
-              ABOUT QUICK SERV TECHNOLOGIES
+              ABOUT QUIK SERV TECHNOLOGIES
             </motion.span>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-emerald-100 bg-clip-text text-transparent mb-6 leading-tight">
               Making Indian Roads Safer
@@ -531,7 +444,7 @@ const Home = () => {
                 className="text-xl text-gray-300 leading-relaxed mb-8 max-w-lg"
                 variants={itemVariants}
               >
-                At <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Quick Serv Technologies</span>, we're dedicated to bringing expert dashcam installation right to your doorstep across{" "}
+                At <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Quik Serv Technologies</span>, we're dedicated to bringing expert dashcam installation right to your doorstep across{" "}
                 <span className="font-bold text-blue-400 ">9000+ pincodes</span>.
               </motion.p>
 
@@ -611,166 +524,163 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <WhyChooseUsSection/>
+      <WhyChooseUsSection />
 
       {/* Get In Touch Section */}
       <section className="py-24 bg-gradient-to-b from-slate-50 to-blue-50/30 relative overflow-hidden" id="contact">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-emerald-400/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-gradient-to-r from-emerald-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
-      </div>
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-emerald-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-72 h-72 bg-gradient-to-r from-emerald-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
 
-      <div className="container-custom relative z-10">
-        {/* Header */}
-        <motion.div 
-          className="text-center mb-4"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.div 
-            className="inline-flex items-center gap-2 px-6 py-3 bg-white/80 backdrop-blur-xl rounded-2xl shadow-xl border border-white/50 mb-8"
-            whileHover={{ scale: 1.02, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
-          >
-            <FaHeadset className="text-emerald-500 text-xl" />
-            <span className="text-lg font-semibold text-gray-800 tracking-wide">Get In Touch</span>
-          </motion.div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-800 via-blue-900 to-emerald-600 bg-clip-text text-transparent mb-4 leading-tight">
-            Ready to Protect Your Drive?
-          </h2>
-          <motion.div className="w-28 h-1 bg-gradient-to-r from-emerald-500 via-blue-500 to-purple-500 mx-auto rounded-full" 
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
+        <div className="container-custom relative z-10">
+          {/* Header */}
+          <motion.div
+            className="text-center mb-4"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          />
-        </motion.div>
-
-        {/* Contact Cards */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {contactItems.map((item, index) => (
-            <motion.a
-              key={item.title}
-              href={item.action}
-              target={item.action.includes('mailto') || item.action.includes('tel') ? '_blank' : '_self'}
-              className="group"
-              variants={cardVariants}
-              whileHover={{ 
-                y: -15,
-                scale: 1.02,
-                transition: { duration: 0.3 }
-              }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <div className="relative bg-white/70 backdrop-blur-xl rounded-3xl p-10 shadow-2xl border border-white/60 hover:shadow-3xl hover:bg-white/90 transition-all duration-500 overflow-hidden h-full flex flex-col items-center justify-center text-center">
-                {/* Animated Ring */}
-                <motion.div 
-                  className={`absolute inset-0 bg-gradient-to-r ${item.color} opacity-20 rounded-3xl -z-10`}
-                  animate={{ 
-                    scale: [1, 1.1, 1],
-                    opacity: [0.2, 0.3, 0.2]
-                  }}
-                  transition={{ 
-                    duration: 3, 
-                    repeat: Infinity,
-                    ease: "easeInOut" 
-                  }}
-                />
-                
-                {/* Icon */}
-                <motion.div 
-                  className={`w-20 h-20 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center mb-6 shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}
-                  whileHover={{ 
-                    scale: 1.15, 
-                    rotate: 360,
-                    transition: { duration: 0.6 }
-                  }}
-                >
-                  <item.icon className="w-10 h-10 text-white drop-shadow-lg" />
-                </motion.div>
-
-                {/* Content */}
-                <h3 className="text-bases md:text-xl font-black text-gray-800 mb-3 group-hover:text-gray-900 leading-tight tracking-tight">
-                  {item.title}
-                </h3>
-                <p className="text-lg text-gray-600 font-medium group-hover:text-gray-700 mb-6">
-                  {item.subtitle}
-                </p>
-
-                {/* Action Arrow */}
-                <motion.div 
-                  className="w-12 h-12 bg-gray-100/50 group-hover:bg-emerald-100 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-emerald-200/50"
-                  whileHover={{ 
-                    scale: 1.2,
-                    backgroundColor: "#10b98120"
-                  }}
-                >
-                  <svg className="w-6 h-6 text-gray-600 group-hover:text-emerald-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </motion.div>
-              </div>
-            </motion.a>
-          ))}
-        </motion.div>
-
-        {/* CTA Button */}
-        <motion.div 
-          className="text-center"
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          <motion.a
-            href="#/new-ticket"
-            className="group relative inline-flex items-center gap-4 bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 hover:from-emerald-700 hover:via-blue-700 hover:to-purple-700 text-white text-xl font-bold px-16 py-6 rounded-3xl shadow-2xl hover:shadow-3xl border-0 transition-all duration-500 overflow-hidden"
-            whileHover={{ 
-              scale: 1.05, 
-              boxShadow: "0 25px 50px rgba(16,185,129,0.4)"
-            }}
-            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.8 }}
           >
-            {/* Shine Effect */}
-            <motion.div 
-              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
-              initial={{ x: "-100%" }}
-              animate={{ x: "200%" }}
-              transition={{ 
-                duration: 2, 
-                repeat: Infinity,
-                repeatDelay: 3
-              }}
+            <motion.div
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white/80 backdrop-blur-xl rounded-2xl shadow-xl border border-white/50 mb-8"
+              whileHover={{ scale: 1.02, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
+            >
+              <FaHeadset className="text-emerald-500 text-xl" />
+              <span className="text-lg font-semibold text-gray-800 tracking-wide">Get In Touch</span>
+            </motion.div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-800 via-blue-900 to-emerald-600 bg-clip-text text-transparent mb-4 leading-tight">
+              Ready to Protect Your Drive?
+            </h2>
+            <motion.div className="w-28 h-1 bg-gradient-to-r from-emerald-500 via-blue-500 to-purple-500 mx-auto rounded-full"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
             />
-            
-            <FaCalendarAlt className="text-2xl group-hover:rotate-12 transition-transform duration-300" />
-            <span className="relative z-10 tracking-wide">Book Service Now</span>
-            <motion.div 
-              className="w-3 h-3 bg-white/30 rounded-full ml-2"
-              animate={{ 
-                scale: [1, 1.5, 1],
-                opacity: [0.7, 1, 0.7]
+          </motion.div>
+
+          {/* Contact Cards */}
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {contactItems.map((item, index) => (
+              <motion.a
+                key={item.title}
+                href={item.action}
+                target={item.action.includes('mailto') || item.action.includes('tel') ? '_blank' : '_self'}
+                className="group"
+                variants={cardVariants}
+                whileHover={{
+                  y: -15,
+                  scale: 1.02,
+                  transition: { duration: 0.3 }
+                }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <div className="relative bg-white/70 backdrop-blur-xl rounded-3xl p-10 shadow-2xl border border-white/60 hover:shadow-3xl hover:bg-white/90 transition-all duration-500 overflow-hidden h-full flex flex-col items-center justify-center text-center">
+                  {/* Animated Ring */}
+                  <motion.div
+                    className={`absolute inset-0 bg-gradient-to-r ${item.color} opacity-20 rounded-3xl -z-10`}
+                    animate={{
+                      scale: [1, 1.1, 1],
+                      opacity: [0.2, 0.3, 0.2]
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  />
+
+                  {/* Icon */}
+                  <motion.div
+                    className={`w-20 h-20 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center mb-6 shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}
+                    whileHover={{
+                      scale: 1.15,
+                      rotate: 360,
+                      transition: { duration: 0.6 }
+                    }}
+                  >
+                    <item.icon className="w-10 h-10 text-white drop-shadow-lg" />
+                  </motion.div>
+
+                  {/* Content */}
+                  <h3 className="text-bases md:text-xl font-black text-gray-800 mb-3 group-hover:text-gray-900 leading-tight tracking-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-lg text-gray-600 font-medium group-hover:text-gray-700 mb-6">
+                    {item.subtitle}
+                  </p>
+
+                  {/* Action Arrow */}
+                  <motion.div
+                    className="w-12 h-12 bg-gray-100/50 group-hover:bg-emerald-100 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-emerald-200/50"
+                    whileHover={{
+                      scale: 1.2,
+                      backgroundColor: "#10b98120"
+                    }}
+                  >
+                    <svg className="w-6 h-6 text-gray-600 group-hover:text-emerald-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </motion.div>
+                </div>
+              </motion.a>
+            ))}
+          </motion.div>
+
+          {/* CTA Button */}
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <motion.a
+              href="#/new-ticket"
+              className="group relative inline-flex items-center gap-4 bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 hover:from-emerald-700 hover:via-blue-700 hover:to-purple-700 text-white text-xl font-bold px-16 py-6 rounded-3xl shadow-2xl hover:shadow-3xl border-0 transition-all duration-500 overflow-hidden"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 25px 50px rgba(16,185,129,0.4)"
               }}
-              transition={{ 
-                duration: 1.5, 
-                repeat: Infinity 
-              }}
-            />
-          </motion.a>
-        </motion.div>
-      </div>
-    </section>
+              whileTap={{ scale: 0.95 }}
+            >
+              {/* Shine Effect */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
+                initial={{ x: "-100%" }}
+                animate={{ x: "200%" }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatDelay: 3
+                }}
+              />
 
-
-
+              <FaCalendarAlt className="text-2xl group-hover:rotate-12 transition-transform duration-300" />
+              <span className="relative z-10 tracking-wide">Book Service Now</span>
+              <motion.div
+                className="w-3 h-3 bg-white/30 rounded-full ml-2"
+                animate={{
+                  scale: [1, 1.5, 1],
+                  opacity: [0.7, 1, 0.7]
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity
+                }}
+              />
+            </motion.a>
+          </motion.div>
+        </div>
+      </section>
 
     </div>
   );
