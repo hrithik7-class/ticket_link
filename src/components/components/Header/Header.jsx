@@ -116,7 +116,7 @@ const Header = () => {
                 <img
                   src={logo}
                   alt="Quick Serv Technologies"
-                  className="h-[42px] w-auto object-contain"
+                  className="h-[55px] w-auto object-contain"
                 />
               </a>
             </div>

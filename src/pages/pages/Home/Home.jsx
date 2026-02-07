@@ -55,7 +55,7 @@ const contactItems = [
 
 const stats = [
   { icon: FaMapMarkerAlt, number: "9000+", label: "Pincodes", color: "from-blue-500 to-blue-600" },
-  { icon: FaTools, number: "1lac+", label: "Installations", color: "from-emerald-500 to-emerald-600" },
+  { icon: FaTools, number: "100000+", label: "Installations", color: "from-emerald-500 to-emerald-600" },
   { icon: FaCar, number: "All", label: "Vehicle Types", color: "from-purple-500 to-purple-600" },
   { icon: FaShieldAlt, number: "100%", label: "Warranty Safe", color: "from-orange-500 to-orange-600" }
 ];
@@ -495,7 +495,7 @@ const Home = () => {
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  className="group relative p-8 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 hover:bg-white/20 transition-all duration-500 cursor-default"
+                  className="group relative md:p-8 p-3 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 hover:bg-white/20 transition-all duration-500 cursor-default"
                   variants={statVariants}
                   whileHover={{
                     y: -10,

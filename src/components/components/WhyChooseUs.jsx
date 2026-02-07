@@ -11,28 +11,28 @@ const WhyChooseUsSection = () => {
   const stats = [
     {
       icon: FaCheckCircle,
-      number: "1lac+",
+      number: "100000+",
       label: "Installations",
       color: "from-emerald-500 to-green-500",
       description: "Flawless setups across India"
     },
     {
       icon: FaMapMarkerAlt,
-      number: "9K+",
+      number: "9000+",
       label: "Pincodes",
       color: "from-blue-500 to-cyan-500",
       description: "Doorstep service everywhere"
     },
     {
       icon: FaStar,
-      number: "4.8",
-      label: "Rating",
+      number: "4.9",
+      label: "Google Ranking",
       color: "from-yellow-400 to-orange-400",
       description: "Loved by customers"
     },
     {
       icon: FaUsers,
-      number: "5K+",
+      number: "5000+",
       label: "Technicians",
       color: "from-purple-500 to-pink-500",
       description: "Expert certified team"
@@ -170,7 +170,7 @@ const WhyChooseUsSection = () => {
                       delay: index * 0.2
                     }}
                   >
-                    <div className="text-4xl lg:text-5xl xl:text-6xl font-black bg-gradient-to-r from-gray-900 via-blue-900 to-emerald-700 bg-clip-text text-transparent drop-shadow-2xl mb-2">
+                    <div className="text-3xl lg:text-3xl xl:text-4xl font-black bg-gradient-to-r from-gray-900 via-blue-900 to-emerald-700 bg-clip-text text-transparent drop-shadow-2xl mb-2">
                       {stat.number}
                     </div>
                     <div className="text-sm lg:text-base font-bold text-gray-700 uppercase tracking-wider">
