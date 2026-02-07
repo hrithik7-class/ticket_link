@@ -28,7 +28,8 @@ const WhyChooseUsSection = () => {
       number: "4.9",
       label: "Google Ranking",
       color: "from-yellow-400 to-orange-400",
-      description: "Loved by customers"
+      description: "Loved by customers",
+      link: "https://share.google/O8aHjfASj9vXU1DcC"  
     },
     {
       icon: FaUsers,
@@ -153,7 +154,7 @@ const WhyChooseUsSection = () => {
                     className={`w-20 h-20 lg:w-24 lg:h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br ${stat.color} flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}
                     whileHover={{ scale: 1.15 }}
                   >
-                    <stat.icon className="w-8 h-8 lg:w-10 lg:h-10 text-white drop-shadow-lg" />
+                    <stat.icon onClick={() => stat.link && window.open(stat.link, '_blank')} className="w-8 h-8 lg:w-10 lg:h-10 text-white drop-shadow-lg cursor-pointer" />
                   </motion.div>
 
                   {/* Number */}
