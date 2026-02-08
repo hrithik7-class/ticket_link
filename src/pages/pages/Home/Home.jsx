@@ -43,13 +43,7 @@ const contactItems = [
     action: "mailto:support@quikservtechnologies.com",
     color: "from-blue-500 to-indigo-500"
   },
-  {
-    icon: FaMapMarkerAlt,
-    title: "Mumbai, Maharashtra",
-    subtitle: "PAN India Service",
-    action: "#",
-    color: "from-purple-500 to-pink-500"
-  }
+
 ];
 
 
@@ -563,7 +557,7 @@ const Home = () => {
 
           {/* Contact Cards */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20"
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"

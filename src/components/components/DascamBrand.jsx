@@ -23,6 +23,8 @@ export default function BrandScroller() {
     "https://installdashcam.in/assets/customer7-Dm-k3KzQ.jpg",
     "https://installdashcam.in/assets/customer8-BHD2pgXp.jpg",
     "https://installdashcam.in/assets/customer9-iZt8T4ED.jpg",
+    "/images/brand1.jpeg",
+    "/images/brand2.jpeg"
   ];
 
   return (
@@ -35,7 +37,7 @@ export default function BrandScroller() {
           Dashcam Brands We Install
         </h2>
         <p className="text-center text-black/90 text-lg mb-16 font-normal">
-          Trusted by leading dashcam manufacturers across PAN India
+          PAN India dashcam installation of all leading brands
         </p>
 
         <div className="relative overflow-hidden px-4 z-10">

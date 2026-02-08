@@ -8,6 +8,7 @@ import {
   FaFileAlt,
   FaQuestionCircle
 } from 'react-icons/fa';
+import { FaShield } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
@@ -62,6 +63,12 @@ const Footer = () => {
                   <span className="text-[15px]">FAQs</span>
                 </a>
               </li>
+              <li>
+                <a href="#/warranty" className="flex items-center gap-3 text-gray-400 hover:text-[var(--qs-blue)] transition-colors group">
+                  <FaShield className="text-gray-500 group-hover:text-[var(--qs-blue)] transition-colors" size={16} />
+                  <span className="text-[15px]">Warranty Policy</span>
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -94,7 +101,7 @@ const Footer = () => {
                   <FaMapMarkerAlt size={18} />
                 </div>
                 <span className="text-gray-300 text-[15px]">
-                  Maharashtra, India
+                Mumbai Maharashtra, India
                 </span>
               </li>
             </ul>

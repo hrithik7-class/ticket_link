@@ -10,6 +10,7 @@ import TermsAndConditions from "./pages/pages/TermsAndConditions";
 import PrivacyPolicy from "./pages/pages/PrivacyPolicy";
 import RefundPolicy from "./pages/pages/RefundPolicy";
 import FAQ from "./pages/pages/FAQ";
+import WarrantyPolicy from "./pages/pages/WarrantyPolicy";
 
 export default function App() {
   const [route, setRoute] = useState(window.location.hash || "#/");
@@ -37,6 +38,8 @@ export default function App() {
         return <RefundPolicy />;
       case "#/faq":
         return <FAQ />;
+      case "#/warranty":
+        return <WarrantyPolicy />;
       default:
         return <Home />;
     }
