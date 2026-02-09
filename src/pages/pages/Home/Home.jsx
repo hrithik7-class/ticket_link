@@ -234,23 +234,22 @@ const Home = () => {
 
   return (
     <div className="font-sans">
-      
+
       {/* Hero Carousel Section with Framer Motion */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden" id='home'>
 
         {/* Background Slide Animation */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentSlide}
             className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
             style={{
               backgroundImage: `url(${slides[currentSlide].bgImage})`,
             }}
-            initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.1 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            initial={false}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
           >
+            
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70" />
           </motion.div>
         </AnimatePresence>
@@ -379,7 +378,7 @@ const Home = () => {
       </section>
 
       {/* Dashcam Brands Section */}
-      <BrandScroller/>
+      <BrandScroller />
 
       {/* about us */}
       <section className="pt-24 bg-gradient-to-br from-slate-800 via-blue-900 to-gray-800 relative overflow-hidden" id="about">

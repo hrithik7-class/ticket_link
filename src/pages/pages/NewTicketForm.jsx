@@ -208,7 +208,9 @@ export default function NewTicketForm({ onClose }) {
     "https://installdashcam.in/assets/omai-B6-_CY3U.jpg",
     "https://installdashcam.in/assets/customer7-Dm-k3KzQ.jpg",
     "https://installdashcam.in/assets/customer8-BHD2pgXp.jpg",
-    "https://installdashcam.in/assets/customer9-iZt8T4ED.jpg"
+    "https://installdashcam.in/assets/customer9-iZt8T4ED.jpg",
+    "/images/brand1.jpeg",
+    "/images/brand2.jpeg"
   ];
 
   // ---------------- API fetches ----------------
